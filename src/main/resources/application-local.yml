@@ -1,0 +1,23 @@
+spring:
+  flyway:
+    enabled: false
+  datasource:
+    url: jdbc:mysql://localhost/order?createDatabaseIfNotExist=true
+    username: root
+    password:
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  application:
+    name: order-service
+server:
+  port: 8091
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8093/eureka/
